@@ -1,0 +1,24 @@
+﻿@model List<WhatwedoListViewModel>
+
+<section class="w3l-witemshny-main py-5">
+    <div class="container py-md-4">
+        <!--/row-1-->
+        <div class="witemshny-grids row">
+            @foreach (var item in Model)
+            {
+            <div class="col-xl-2 col-md-4 col-6 product-incfhny mt-4">
+                <div class="weitemshny-grid oposition-relative">
+                    <a href="#img" class="d-block zoom"><img src="@item.ImageURL" alt="" class="img-fluid news-image"></a>
+                    <div class="witemshny-inf">
+                    </div>
+                </div>
+                <h4 class="gdnhy-1 mt-4">
+                    <a href="#img">@item.Title</a>
+                </h4>
+            </div>
+            }
+        </div>
+        <!--//row-1-->
+
+    </div>
+</section>

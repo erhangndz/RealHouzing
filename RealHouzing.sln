@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealHouzing.EntityLayer", "RealHouzing.EntityLayer\RealHouzing.EntityLayer.csproj", "{9EFAEEBF-4CBC-4885-9EFB-537A04D010CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealHouzing.DataAccessLayer", "RealHouzing.DataAccessLayer\RealHouzing.DataAccessLayer.csproj", "{05CC4FF3-DD9B-4494-AE15-DD329ECAA683}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealHouzing.BusinessLayer", "RealHouzing.BusinessLayer\RealHouzing.BusinessLayer.csproj", "{EFB8C71F-A8B8-48A8-9364-EE6354A76288}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Realhouzing.DtoLayer", "Realhouzing.DtoLayer\Realhouzing.DtoLayer.csproj", "{5FB2CE40-FAEB-4B2E-A6F5-BF86E957191A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RealHozing.ApiLayer", "RealHozing.ApiLayer\RealHozing.ApiLayer.csproj", "{604B7A53-97F6-454D-B33D-D295AE923F27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealHouzing.Consume", "RealHouzing.Consume\RealHouzing.Consume.csproj", "{FB4D0BDE-FA0C-4573-BE54-08A062922759}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EFAEEBF-4CBC-4885-9EFB-537A04D010CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFAEEBF-4CBC-4885-9EFB-537A04D010CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFAEEBF-4CBC-4885-9EFB-537A04D010CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFAEEBF-4CBC-4885-9EFB-537A04D010CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CC4FF3-DD9B-4494-AE15-DD329ECAA683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CC4FF3-DD9B-4494-AE15-DD329ECAA683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CC4FF3-DD9B-4494-AE15-DD329ECAA683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CC4FF3-DD9B-4494-AE15-DD329ECAA683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB8C71F-A8B8-48A8-9364-EE6354A76288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB8C71F-A8B8-48A8-9364-EE6354A76288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB8C71F-A8B8-48A8-9364-EE6354A76288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB8C71F-A8B8-48A8-9364-EE6354A76288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB2CE40-FAEB-4B2E-A6F5-BF86E957191A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB2CE40-FAEB-4B2E-A6F5-BF86E957191A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB2CE40-FAEB-4B2E-A6F5-BF86E957191A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB2CE40-FAEB-4B2E-A6F5-BF86E957191A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604B7A53-97F6-454D-B33D-D295AE923F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604B7A53-97F6-454D-B33D-D295AE923F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604B7A53-97F6-454D-B33D-D295AE923F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604B7A53-97F6-454D-B33D-D295AE923F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB4D0BDE-FA0C-4573-BE54-08A062922759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB4D0BDE-FA0C-4573-BE54-08A062922759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB4D0BDE-FA0C-4573-BE54-08A062922759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB4D0BDE-FA0C-4573-BE54-08A062922759}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1CBF25E-FCAC-49B3-8D3F-598C56EA3604}
+	EndGlobalSection
+EndGlobal

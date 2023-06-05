@@ -1,0 +1,18 @@
+﻿@model AddCategoryViewModel
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h1>Kategori Ekleme Sayfası</h1>
+
+<br />
+<form method="post">
+    <label>Kategori Adı</label>
+    <input type="text" asp-for="CategoryName" class="form-control"/>
+    <br />
+    <button class="btn-outline-info">Kaydet</button>
+
+</form>
+
