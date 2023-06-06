@@ -18,5 +18,12 @@ namespace RealHouzing.DataAccessLayer.Concrete
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<WhatWeDo> WhatWeDos { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BuyLease> BuyLeases { get; set; }
+        public DbSet<Posting> Postings { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<VideoandAbout> VideoandAbouts { get; set; }
     }
 }
+

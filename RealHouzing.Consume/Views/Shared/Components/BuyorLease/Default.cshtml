@@ -1,34 +1,26 @@
-﻿<div class=" w3l-3-grids py-5" id="grids-3">
+﻿@model List<BuyLeaseViewModel>
+<div class=" w3l-3-grids py-5" id="grids-3">
     <div class="container py-md-4">
         <div class="row">
+            @foreach (var item in Model)
+            {
+                
+            
             <div class="col-md-6 mt-md-0">
                 <div class="grids3-info position-relative">
-                    <a href="#img" class="d-block zoom"><img src="~/RealHouzing-Starter/assets/images/banner1.jpg" alt="" class="img-fluid news-image"></a>
+                    <a href="#img" class="d-block zoom"><img src="@item.ImageURL" alt="" class="img-fluid news-image"></a>
                     <div class="w3-grids3-info">
                         <h4 class="gdnhy-1">
-                            <a href="#img"> Ticari Mülk<br>Kiralayın</a>
+                            <a href="#img"> @item.Title1<br>@item.Title2</a>
                             <a class="w3item-link btn btn-style mt-4" href="#">
-                                Mülkleri Keşfedin <i class="fas fa-angle-double-right ms-2"></i>
+                                @item.Button <i class="fas fa-angle-double-right ms-2"></i>
                             </a>
 
                         </h4>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mt-md-0 mt-4 grids3-info2">
-                <div class="grids3-info position-relative">
-                    <a href="#img" class="d-block zoom"><img src="~/RealHouzing-Starter/assets/images/banner2.jpg" alt="" class="img-fluid news-image"></a>
-                    <div class="w3-grids3-info second">
-                        <h4 class="gdnhy-1">
-                            <a href="#img">Ticari Mülk<br>Satın Alın</a>
-                            <a class="w3item-link btn btn-style mt-4" href="#">
-                                Mülkleri Keşfedin <i class="fas fa-angle-double-right ms-2"></i>
-                            </a>
-                        </h4>
-
-                    </div>
-                </div>
-            </div>
+          }
 
         </div>
     </div>

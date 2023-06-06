@@ -1,0 +1,49 @@
+﻿@model List<BlogViewModel>
+<section class="w3l-blog">
+    <div class="blog py-5" id="Newsblog">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="title-content text-center mb-lg-3 mb-4">
+                <h6 class="title-subw3hny mb-1">Blog Yazılarımız</h6>
+                <h3 class="title-w3l mb-5">Son Makalelerimizi <br>İnceleyebilrsiniz</h3>
+            </div>
+
+            <div class="row justify-content-center">
+                @foreach (var item in Model)
+                {
+                    
+                
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#blog" class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="@item.BlogImage" alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body blog-details">
+
+                            <a href="#blog" class="blog-desc">@item.Title</a>
+                            <p>@item.Description</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="author align-items-center">
+                                <a href="#author" class="post-author">
+                                    <img src="@item.WriterImage" alt="" class="img-fluid rounded-circle">
+                                </a>
+                                <ul class="blog-meta">
+                                    <li>
+                                        <span class="meta-value">Yazan:</span><a href="#author">@item.Writer</a>
+                                    </li>
+                                </ul>
+                                <div class="date">
+                                    <p>@item.Date.ToShortDateString()</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+             
+            </div>
+        </div>
+    </div>
+</section>
