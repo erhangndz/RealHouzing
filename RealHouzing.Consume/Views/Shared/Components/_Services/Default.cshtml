@@ -1,41 +1,34 @@
-﻿<section class="w3l-features py-5" id="features">
+﻿@model List<ServiceViewModel>
+
+    
+
+<section class="w3l-features py-5" id="features">
     <div class="container py-lg-5 py-md-4 py-2">
+       
         <div class="title-content text-center mb-lg-3 mb-4">
-            <h6 class="title-subw3hny mb-1">What We Do</h6>
+            <h6 class="title-subw3hny mb-1">Hizmetlerimiz</h6>
+            @foreach (var item in Model)
+            {
             <h3 class="title-w3l">
-                We're on a Mission to Change
-                View of RealEstate Field.
-            </h3>
+                @item.Title
+            </h3>}
         </div>
         <div class="main-cont-wthree-2">
             <div class="row justify-content-center">
+                @foreach (var item in Model)
+                {
+                    
+                
                 <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
                     <div class="grids-1 box-wrap">
                         <div class="icon">
-                            <i class="fas fa-pen-fancy"></i>
+                            <i class="@item.Icon"></i>
                         </div>
-                        <h4><a href="#service" class="title-head mb-3">Your One-Stop Shop for Finding Your Dream Home</a></h4>
-                        <p class="text-para">Lorem ipsum dolor sit amet, elit. Id ab commodi magnam. </p>
+                        <h4><a href="#service" class="title-head mb-3">@item.ServiceName</a></h4>
+                        <p class="text-para">@item.Description </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
-                    <div class="grids-1 box-wrap">
-                        <div class="icon">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                        <h4><a href="#service" class="title-head mb-3">Schedule a Free, No-Obligation Appointment</a></h4>
-                        <p class="text-para">Lorem ipsum dolor sit amet, elit. Id ab commodi magnam. </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-5 mt-4">
-                    <div class="grids-1 box-wrap">
-                        <div class="icon">
-                            <i class="fas fa-house-user"></i>
-                        </div>
-                        <h4><a href="#service" class="title-head mb-3">Understand the Value of Your Property</a></h4>
-                        <p class="text-para">Lorem ipsum dolor sit amet, elit. Id ab commodi magnam. </p>
-                    </div>
-                </div>
+             }
             </div>
         </div>
     </div>

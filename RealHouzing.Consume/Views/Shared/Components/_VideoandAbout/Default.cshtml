@@ -1,5 +1,8 @@
-﻿<section class="w3l-grids-3 py-5" id="about">
+﻿@model List<VideoandAboutViewModel>
+
+<section class="w3l-grids-3 py-5" id="about">
     <div class="container py-md-5 py-3">
+        @foreach(var item in Model){
         <div class="row bottom-ab-grids">
             <div class="w3l-video-left col-lg-6" id="video">
                 <!-- /home-page-video-popup-->
@@ -8,7 +11,7 @@
                       
                         
                         <div id="small-dialog" class="zoom-anim-dialog">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sx7FSKCedos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="@item.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                         <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                     </div>
@@ -17,13 +20,11 @@
             </div>
             <div class="w3ab-left-top col-lg-6 mt-lg-0 mt-5 ps-lg-5">
                 <h6 class="title-subw3hny mb-1">Bir Ev Satın Alın</h6>
-                <h3 class="title-w3l mb-2">Hayalinizdeki evi bulun ve ona sahip olun</h3>
-                <p class="my-3"> Siz de sitemizdeki ayrıcalıklardan faydalanın ve o hayalinizi kurduğunuz eve hiç yorulmadan sahip olun. Ev almak hiç bu kadar kolay olmamıştı. </p>
-                <p class="my-3">
-                    Satın almada tüm evrak işlerinizi biz hallediyoruz. Size sadece yeni hayatınızı kuracağınız eve yerleşmek ve tadını çıkarmak kalıyor.
-                </p>
+                <h3 class="title-w3l mb-2">@item.Title</h3>
+                <p class="my-3"> @item.Description </p>
+               
                 <a href="about.html" class="btn btn-style btn-primary mt-4">Satılık evleri keşfedin <i class="fas fa-angle-double-right ms-2"></i></a>
             </div>
-        </div>
+        </div>}
     </div>
 </section>

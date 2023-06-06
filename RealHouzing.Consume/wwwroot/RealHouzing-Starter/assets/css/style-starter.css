@@ -21324,5 +21324,18 @@ section.footer-inner-main {
     }
 }
 
+.w3l-left-img5 {
+    background: no-repeat center center;
+    position: relative;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    min-height: 400px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+
 /*--//Footer-9--*/
 /*# sourceMappingURL=style-freedom.css.map */
