@@ -2,10 +2,11 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 
-<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h3 class="container">Kategoriler</h3>
 
 <br />
 <br />
@@ -20,8 +21,9 @@
         </tr>
         @foreach (var item in Model)
         {
+            count++;
             <tr>
-                <th>@item.CategoryID</th>
+                <th>@count</th>
                 <td>@item.CategoryName</td>
                 <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-danger">Sil</a></td>
                 <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Güncelle</a></td>

@@ -1,10 +1,7 @@
-﻿using RealHouzing.EntityLayer.Concrete;
-
-namespace RealHouzing.Consume.Models
+﻿namespace RealHouzing.Consume.Models
 {
-    public class PropertyViewModel
+    public class AddProductViewModel
     {
-        public int ProductID { get; set; }
         public string ProductTitle { get; set; }
         public decimal ProductPrice { get; set; }
         public string ProductType { get; set; }
@@ -13,6 +10,6 @@ namespace RealHouzing.Consume.Models
         public int BathCount { get; set; }
         public int Square { get; set; }
         public string ImageURL { get; set; }
-       public int CategoryID { get; set; }
+        public int CategoryID { get; set; }
     }
 }

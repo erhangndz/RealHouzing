@@ -51,7 +51,7 @@ namespace RealHozing.ApiLayer.Controllers
 
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
             var values= _productService.TGetByID(id);
@@ -59,7 +59,7 @@ namespace RealHozing.ApiLayer.Controllers
             return Ok();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
             var values = _productService.TGetByID(id);
