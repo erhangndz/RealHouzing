@@ -1,22 +1,15 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+
 <!doctype html>
-<html lang="en">
+<html>
 
-@await Component.InvokeAsync("Head")
 
-<body>
-    <!--/Header-->
-    @await Component.InvokeAsync("_Navbar")
-    <!--//Header-->
-    <!--/Banner-Start-->
+ 
+  
     <!-- main-slider -->
     @await Component.InvokeAsync("_MainArea")
     <!-- //main-slider -->
@@ -47,12 +40,7 @@ Author URL: http://w3layouts.com
     <!--/w3l-blog-->
     @await Component.InvokeAsync("_Blog")
     <!--//w3l-blog-->
-    <!--/footer-9-->
-    @await Component.InvokeAsync("_Footer")
-    <!--//footer-9 -->
-    <!-- Template JavaScript -->
-    @await Component.InvokeAsync("_Scripts")
-
-</body>
+ 
+   
 
 </html>

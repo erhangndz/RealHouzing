@@ -36,9 +36,14 @@ builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 builder.Services.AddScoped<IVideoandAboutDal, EfVideoandAboutDal>();
 builder.Services.AddScoped<IVideoandAboutService, VideoandAboutManager>();
 
+builder.Services.AddScoped<ISubscribeDal, EfSubscribeDal>();
+builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 
+builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
 
-
+builder.Services.AddScoped<ITeamDal, EfTeamDal>();
+builder.Services.AddScoped<ITeamService, TeamManager>();
 
 
 builder.Services.AddControllers();

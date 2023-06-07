@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+@await Component.InvokeAsync("Head")
+
+<body>
+    <!--/Header-->
+    @await Component.InvokeAsync("_Navbar")
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @await Component.InvokeAsync("_Footer")
+    <!--//footer-9 -->
+    <!-- Template JavaScript -->
+    @await Component.InvokeAsync("_Scripts")
+
+</body>

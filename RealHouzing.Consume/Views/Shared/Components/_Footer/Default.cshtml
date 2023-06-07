@@ -4,8 +4,8 @@
             <div class="right-side">
                 <div class="row footer-hny-grids sub-columns">
                     <div class="col-lg-3 sub-one-left">
-                        <h6>About </h6>
-                        <p class="footer-phny pe-lg-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ute dolor sit.</p>
+                        <h6>Hakkımızda </h6>
+                        <p class="footer-phny pe-lg-5">Siz de sitemizdeki ayrıcalıklardan faydalanın ve o hayalinizi kurduğunuz eve hiç yorulmadan sahip olun. Ev almak hiç bu kadar kolay olmamıştı.</p>
                         <div class="columns-2 mt-4 pt-lg-2">
                             <ul class="social">
                                 <li>
@@ -25,24 +25,24 @@
                         </div>
                     </div>
                     <div class="col-lg-2 sub-two-right">
-                        <h6>Company</h6>
+                        <h6>Şirketimiz</h6>
                         <ul>
 
                             <li>
-                                <a href="#why"><i class="fas fa-angle-right"></i> Why Us</a>
+                                <a href="#why"><i class="fas fa-angle-right"></i> Neden Biz?</a>
                             </li>
                             <li>
                                 <a href="#licence">
-                                    <i class="fas fa-angle-right"></i>Our Agents
+                                    <i class="fas fa-angle-right"></i>Çalışanlarımız
                                 </a>
                             </li>
                             <li>
                                 <a href="#log">
-                                    <i class="fas fa-angle-right"></i>Our Offers
+                                    <i class="fas fa-angle-right"></i>Tekliflerimiz
                                 </a>
                             </li>
 
-                            <li><a href="#career"><i class="fas fa-angle-right"></i> Careers</a></li>
+                            <li><a href="#career"><i class="fas fa-angle-right"></i> Kariyer İmkanı</a></li>
 
                         </ul>
                     </div>
@@ -50,71 +50,58 @@
                         <h6>Services</h6>
                         <ul>
                             <li>
-                                <a href="#processing"><i class="fas fa-angle-right"></i> Buy Properties</a>
+                                <a href="#processing"><i class="fas fa-angle-right"></i> Mülk Satın Alın</a>
                             </li>
                             <li>
-                                <a href="#research"><i class="fas fa-angle-right"></i> Sell Properties</a>
+                                <a href="#research"><i class="fas fa-angle-right"></i> Mülk Satın</a>
                             </li>
                             <li>
-                                <a href="#metal"><i class="fas fa-angle-right"></i> Rent Properties</a>
+                                <a href="#metal"><i class="fas fa-angle-right"></i> Mülk Kiralayın</a>
                             </li>
                             <li>
-                                <a href="#metal"><i class="fas fa-angle-right"></i> Property Search</a>
+                                <a href="#metal"><i class="fas fa-angle-right"></i> Mülk Arayın</a>
                             </li>
 
 
                         </ul>
                     </div>
                     <div class="col-lg-2 sub-two-right">
-                        <h6>Explore</h6>
+                        <h6>Keşfedin</h6>
                         <ul>
                             <li>
-                                <a href="#processing"><i class="fas fa-angle-right"></i> Homes for Rent</a>
+                                <a href="#processing"><i class="fas fa-angle-right"></i> Kiralık Müstakil Evler</a>
                             </li>
                             <li>
-                                <a href="#research"><i class="fas fa-angle-right"></i> Apartments for Rent</a>
+                                <a href="#research"><i class="fas fa-angle-right"></i> Kiralık Daireler</a>
                             </li>
                             <li>
-                                <a href="#metal"><i class="fas fa-angle-right"></i> Homes for Sale</a>
+                                <a href="#metal"><i class="fas fa-angle-right"></i> Satılık Müstakil Evler</a>
                             </li>
                             <li>
-                                <a href="#metal"><i class="fas fa-angle-right"></i> Apartments for Sale</a>
+                                <a href="#metal"><i class="fas fa-angle-right"></i> Satılık Daireler</a>
                             </li>
 
 
                         </ul>
                     </div>
-                    <div class="col-lg-3 sub-one-left ps-lg-5">
-                        <h6>Stay Update!</h6>
-                        <p class="w3f-para mb-4">Subscribe to our newsletter to receive our weekly feed.</p>
-                        <div class="w3l-subscribe-content align-self mt-lg-0 mt-5">
-                            <form action="#" method="post" class="subscribe-wthree">
-                                <div class="flex-wrap subscribe-wthree-field">
-                                    <input class="form-control" type="email" placeholder="Email" name="email" required="">
-                                    <button class="btn btn-style btn-primary" type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-
-
-                    </div>
+                    @await Html.PartialAsync("~/Views/Default/Subscribe.cshtml")
                 </div>
             </div>
             <div class="below-section mt-5 pt-lg-3">
                 <div class="copyright-footer">
                     <div class="columns text-left">
                         <p>
-                            © 2021 RealHouzing.All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank">
+                            © @DateTime.Now.Year RealHousing.Tüm Hakları Saklıdır. Tasarım: <a href="https://w3layouts.com/" target="_blank">
                                 W3Layouts
                             </a>
                         </p>
                     </div>
                     <ul class="footer-w3list text-right">
                         <li>
-                            <a href="#url">Privacy Policy</a>
+                            <a href="#url">Gizlilik Politikası</a>
                         </li>
                         <li>
-                            <a href="#url">Terms &amp; Conditions</a>
+                            <a href="#url">Şartlar &amp; Koşullar</a>
                         </li>
                     </ul>
                 </div>

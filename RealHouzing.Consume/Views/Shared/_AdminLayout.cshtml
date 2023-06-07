@@ -1,0 +1,343 @@
+﻿﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>AdminLTE 3 | Dashboard 3</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/AdminLTE/plugins/fontawesome-free/css/all.min.css">
+
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminLTE/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to to the body tag
+to get the desired effect
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="~/AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                     style="opacity: .8">
+                <span class="brand-text font-weight-light">Admin Paneli</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="~/AdminLTE/dist/img/erhan (2).jpeg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Erhan Gündüz</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                        
+                            <li class="nav-item">
+                                <a href="/Category/Index" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Kategoriler
+
+                                    </p>
+                                </a>
+
+                            </li>
+                        
+                        <li class="nav-item">
+                            <a href="/Product/Index" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    İlanlar
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Team/Index" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    Ekibimiz
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Blog/Index" class="nav-link">
+                                <i class="nav-icon fas fa-pen"></i>
+                                <p>
+                                    Bloglar
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/AdminService/Index" class="nav-link">
+                                <i class="nav-icon fas fa-pen"></i>
+                                <p>
+                                   Hizmetler
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Testimonial/Index" class="nav-link">
+                                <i class="nav-icon fas fa-pen"></i>
+                                <p>
+                                    Referanslar
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Subscribe/Index" class="nav-link">
+                                <i class="nav-icon fas fa-pen"></i>
+                                <p>
+                                    Aboneler
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/WhatWeDo/Index" class="nav-link">
+                                <i class="nav-icon fas fa-pen"></i>
+                                <p>
+                                   Yaptıklarımız
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/VideoandAbout/Index" class="nav-link">
+                                <i class="nav-icon fas fa-pen"></i>
+                                <p>
+                                   Video ve Açıklama
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="/BuyorLease/Index" class="nav-link">
+                                <i class="nav-icon fas fa-pen"></i>
+                                <p>
+                                    Sat &Aacute; Kirala
+
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Grafikler
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/Chart/Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pasta Grafiği</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/flot.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Daire Grafiği</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/inline.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Sütun Grafiği</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/AdminAbout/Index" class="nav-link">
+                                <i class="nav-icon fas fa-tree"></i>
+                                <p>
+                                    Hakkımızda
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Header/HeaderReport" class="nav-link">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>
+                                    Raporlar
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Test/SweetAlert" class="nav-link">
+                                <i class="nav-icon fas fa-bell"></i>
+                                <p>
+                                    Sweet Alert
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Contact/Index" class="nav-link">
+                                <i class="nav-icon fas fa-comment"></i>
+                                <p>
+                                    İletişim & Mesajlar
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Skill/Index" class="nav-link">
+                                <i class="nav-icon fas fa-award"></i>
+                                <p>
+                                    Yetenek Kartım
+
+                                </p>
+                            </a>
+
+                        </li>
+
+                        <li class="nav-header"></li>
+                        <li class="nav-item">
+                            <a href="/Authorize/Index" class="nav-link">
+                                <i class="nav-icon fas fa-users-cog"></i>
+                                <p>
+                                    Yetkilendirmeler
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Gallery/Index" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Yazar Galerisi
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="/ErrorPage/Page404" class="nav-link">
+                                <i class="nav-icon fas fa-thumbs-down"></i>
+                                <p>
+                                    Hata Sayfaları
+
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Home/HomeLayout" class="nav-link">
+                                <i class="nav-icon fas fa-laptop"></i>
+                                <p>
+                                    Siteye Git
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Login/Logout" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>
+                                    Çıkış Yap
+                                </p>
+                            </a>
+
+                        </li>
+
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Main content -->
+            @RenderBody()
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Main Footer -->
+
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="~/AdminLTE/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="~/AdminLTE/dist/js/adminlte.js"></script>
+    <script src="~/AdminLTE/plugins/jquery/jquery.min.js"></script>
+
+
+    <!-- OPTIONAL SCRIPTS -->
+    <script src="~/AdminLTE/plugins/chart.js/Chart.min.js"></script>
+    <script src="~/AdminLTE/dist/js/demo.js"></script>
+    <script src="~/AdminLTE/dist/js/pages/dashboard3.js"></script>
+
+
+</body>
+</html>

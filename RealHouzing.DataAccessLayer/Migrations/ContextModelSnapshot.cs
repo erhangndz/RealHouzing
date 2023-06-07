@@ -22,6 +22,32 @@ namespace RealHouzing.DataAccessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("RealHouzing.EntityLayer.Concrete.About", b =>
+                {
+                    b.Property<int>("AboutID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutID"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Item")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AboutID");
+
+                    b.ToTable("Abouts");
+                });
+
             modelBuilder.Entity("RealHouzing.EntityLayer.Concrete.Blog", b =>
                 {
                     b.Property<int>("BlogID")
@@ -202,6 +228,60 @@ namespace RealHouzing.DataAccessLayer.Migrations
                     b.HasKey("ServiceID");
 
                     b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("RealHouzing.EntityLayer.Concrete.Subscribe", b =>
+                {
+                    b.Property<int>("SubscribeID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubscribeID"), 1L, 1);
+
+                    b.Property<string>("Mail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SubscribeID");
+
+                    b.ToTable("Subscribes");
+                });
+
+            modelBuilder.Entity("RealHouzing.EntityLayer.Concrete.Team", b =>
+                {
+                    b.Property<int>("TeamID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TeamID"), 1L, 1);
+
+                    b.Property<string>("Facebook")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Linkedin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameSurname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Twitter")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TeamID");
+
+                    b.ToTable("Teams");
                 });
 
             modelBuilder.Entity("RealHouzing.EntityLayer.Concrete.Testimonial", b =>

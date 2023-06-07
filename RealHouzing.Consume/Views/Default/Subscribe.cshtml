@@ -1,0 +1,15 @@
+﻿@model AddSubscribeViewModel
+<div class="col-lg-3 sub-one-left ps-lg-5">
+    <h6>Son Gelişmelerden Haberdar Olun!</h6>
+    <p class="w3f-para mb-4">Hemen Abone olun ve en son yayınlanan ilanları ilk siz öğrenin</p>
+    <div class="w3l-subscribe-content align-self mt-lg-0 mt-5">
+        <form action="/Default/Subscribe" method="post" class="subscribe-wthree">
+            <div class="flex-wrap subscribe-wthree-field">
+                <input class="form-control" type="email" placeholder="Email Adresiniz" asp-for="Mail" required="">
+                <button class="btn btn-style btn-primary" type="submit">Abone Ol</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>

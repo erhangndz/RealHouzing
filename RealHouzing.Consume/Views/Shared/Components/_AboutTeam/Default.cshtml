@@ -1,0 +1,41 @@
+﻿ @model List<TeamListViewModel>
+
+<section class="w3l-team-main team py-5" id="team">
+    <div class="container py-lg-5">
+        <div class="title-content text-center mb-2">
+            <h6 class="title-subw3hny mb-1">Ekibimiz</h6>
+            <h3 class="title-w3l">Uzman Ekibimizle Tanışın</h3>
+        </div>
+        <div class="row team-row justify-content-center">
+            @foreach(var item in Model){
+            <div class="col-lg-4 col-6 team-wrap mt-lg-5 mt-4">
+                <div class="team-member text-center">
+                    <div class="team-img">
+                        <img src="@item.ImageURL" alt="" class="radius-image">
+                        <div class="overlay-team">
+                            <div class="team-details text-center">
+                                <div class="socials mt-20">
+                                    <a href="@item.Facebook">
+                                        <span class="fab fa-facebook-f"></span>
+                                    </a>
+                                    <a href="@item.Twitter">
+                                        <span class="fab fa-twitter"></span>
+                                    </a>
+                                    <a href="@item.Linkedin">
+                                        <span class="fab fa-linkedin-in"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#url" class="team-title">@item.NameSurname</a>
+                    <p>@item.Title</p>
+                </div>
+            </div>}
+            <!-- end team member -->
+            
+         
+        </div>
+
+    </div>
+</section>

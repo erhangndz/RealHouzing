@@ -1,0 +1,30 @@
+﻿@model List<AboutFeatureListViewModel>
+<section class="w3l-index-about py-5" id="about2">
+    <div class="container py-md-5 py-2">
+        <div class="row">
+            <div class="col-lg-6 pe-lg-5">
+                @foreach(var item in Model){
+                <div class="w3l-abouthny-img">
+                    <img src="@item.ImageURL" alt="" class="img-fluid radius-image">
+                </div>}
+            </div>
+            <div class="col-lg-6 mt-lg-0 mt-5">
+                <div class="w3l-abouthny-info">
+                    <h6 class="title-subw3hny">Biz Kimiz</h6>
+                    @foreach(var item in Model){
+                    <h3 class="title-w3l">@item.Title</h3>
+                    <p class="mt-4">
+                        @item.Description
+                    </p>}
+                  
+                    <ul class="w3l-right-book w3l-right-book-grid mt-md-5 mt-4">
+                        @foreach(var item in Model){
+                        <li><span class="fas fa-check"></span> @item.Item</li>}
+                      
+                    </ul>
+                    <a href="#services" class="btn btn-style btn-primary mt-4">Hizmetlerimizi Keşfedin <i class="fas fa-angle-double-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

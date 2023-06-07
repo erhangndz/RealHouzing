@@ -1,7 +1,7 @@
 ﻿@model List<CategoryListViewModel>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 
@@ -15,12 +15,16 @@
         <tr>
             <th>#</th>
             <th>Kategori Adı</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
         </tr>
         @foreach (var item in Model)
         {
             <tr>
                 <th>@item.CategoryID</th>
                 <td>@item.CategoryName</td>
+                <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Güncelle</a></td>
             </tr>
         }
     </table>

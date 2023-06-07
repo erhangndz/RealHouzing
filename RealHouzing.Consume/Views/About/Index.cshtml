@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+  <!--/inner-page-->
+  @await Component.InvokeAsync("_AboutBanner")
+    <!--//inner-page-->
+    <!--/w3l-index3-->
+@await Component.InvokeAsync("_AboutFeature")
+    <!--//w3l-index3-->
+    <!--/w3-grids-->
+@await Component.InvokeAsync("_AboutCoLiving")
+    <!--//w3-grids-->
+    <!--/progress-->
+@await Component.InvokeAsync("_AboutProgressBar")
+    <!--//progress-->
+    <!--/faq-section-->
+@await Component.InvokeAsync("_AboutFAQ")
+    <!-- //faq-section -->
+    <!--/w3-grids-->
+@await Component.InvokeAsync("_AboutCounter")
+    <!--//w3-grids-->
+    <!--/w3l-subscribe-content-->
+@await Component.InvokeAsync("_AboutTakeaTour")
+    <!--//w3l-subscribe-content-->
+    <!--/team-sec-->
+@await Component.InvokeAsync("_AboutTeam")
+    <!--//team-sec-->
+
