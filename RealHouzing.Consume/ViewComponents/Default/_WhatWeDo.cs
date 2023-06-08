@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RealHouzing.Consume.Models;
+using RealHouzing.Consume.Models.WhatWeDoModels;
 
 namespace RealHouzing.Consume.ViewComponents.Default
 {

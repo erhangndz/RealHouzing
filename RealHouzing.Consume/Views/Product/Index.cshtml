@@ -1,4 +1,5 @@
-﻿@model List<PropertyViewModel>
+﻿@using RealHouzing.Consume.Models.ProductModels;
+@model List<PropertyViewModel>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -25,13 +26,24 @@
                 <th>@count</th>
                 <td>@item.ProductTitle</td>
                 <td>@item.ProductType</td>
-                <td><a href="/Product/DeleteProduct/@item.ProductID" class="btn btn-outline-danger">Sil</a></td>
-                <td><a href="/Product/UpdateProduct/@item.ProductID" class="btn btn-outline-success">Güncelle</a></td>
+                <td>
+                    <a href="/Product/DeleteProduct/@item.ProductID" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+                <td>
+                    <a href="/Product/UpdateProduct/@item.ProductID" class="btn btn-outline-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Güncelle
+                    </a>
+                </td>
             </tr>
         }
     </table>
     <br />
-    <a href="#" class="btn btn-outline-info">Yeni İlan Girişi</a>
+    <a href="/Product/AddProduct" class="btn btn-outline-info">Yeni İlan Girişi</a>
 </div>
 
 

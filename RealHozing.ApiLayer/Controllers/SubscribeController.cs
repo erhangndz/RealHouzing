@@ -27,5 +27,32 @@ namespace RealHozing.ApiLayer.Controllers
             _subscribeService.TInsert(subscribe);
             return Ok();
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetSubscribe(int id)
+        {
+            var values= _subscribeService.TGetByID(id);
+            return Ok(values);
+        }
+
+        [HttpPut]
+        public IActionResult PutSubscribe(UpdateSubscribeDto p)
+        {
+            Subscribe sub = new Subscribe()
+            {
+                Mail = p.Mail,
+                SubscribeID = p.SubscribeID
+            };
+            _subscribeService.TUpdate(sub);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteSubscribe(int id)
+        {
+            var values = _subscribeService.TGetByID(id);
+            _subscribeService.TDelete(values);
+            return Ok();
+        }
     }
 }

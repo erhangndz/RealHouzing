@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RealHouzing.Consume.Models;
+using RealHouzing.Consume.Models.CategoryModels;
 using RealHouzing.EntityLayer.Concrete;
 using System.Text;
 
