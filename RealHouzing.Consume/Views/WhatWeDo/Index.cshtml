@@ -1,0 +1,48 @@
+﻿@using RealHouzing.Consume.Models.WhatWeDoModels;
+@model List<WhatwedoListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+
+<h3 class="container">Sizin için Yaptıklarımız</h3>
+
+<br />
+<br />
+<div class="container">
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Title</td>
+                <td>
+                    <a href="/WhatWeDo/DeleteWhatWeDo/@item.WhatWeDoID" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+                <td>
+                    <a href="/WhatWeDo/UpdateWhatWeDo/@item.WhatWeDoID" class="btn btn-outline-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/WhatWeDo/AddWhatWeDo" class="btn btn-outline-info">Yeni Hizmet Girişi</a>
+</div>

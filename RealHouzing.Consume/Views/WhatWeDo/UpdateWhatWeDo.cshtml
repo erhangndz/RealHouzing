@@ -1,0 +1,26 @@
+﻿@using RealHouzing.Consume.Models.WhatWeDoModels;
+@model UpdateWhatwedoViewModel
+@{
+    ViewData["Title"] = "UpdateWhatWeDo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h1 class="container">Yaptıklarımız Güncelleme Sayfası</h1>
+
+<br />
+<form method="post" class="container">
+    @Html.HiddenFor(x=>x.WhatWeDoID)
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Görsel URL</label>
+    <input type="text" asp-for="ImageURL" class="form-control" />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+</form>
+
+
+

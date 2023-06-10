@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<!--/inner-page-->
+<div class="inner-banner py-5">
+    <section class="w3l-breadcrumb text-left py-sm-5 ">
+        <div class="container">
+            <div class="w3breadcrumb-gids">
+                <div class="w3breadcrumb-left text-left">
+                    <h2 class="inner-w3-title mt-sm-5 mt-4">
+                        Bizimle İletişime Geçin
+                    </h2>
+
+                </div>
+                <div class="w3breadcrumb-right">
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="/Default/Index">Ana Sayfa</a></li>
+                        <li class="active"><span class="fas fa-angle-double-right mx-2"></span> İletişim</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+<!--//inner-page-->
+<div class="w3l-contact-10 py-5" id="contact">
+    <div class="form-41-mian pt-lg-4 pt-md-3 pb-lg-4">
+        <div class="container">
+            <div class="heading text-center mx-auto">
+                <h5 class="title-subw3hny text-center">Ekibimizle İletişime Geçin</h5>
+                <h3 class="title-w3l">Sorularınız mı var? </h3>
+            </div>
+            @await Component.InvokeAsync("_ContactInfo")
+
+            @await Html.PartialAsync("SendMessage")
+        </div>
+    </div>
+    <!-- //contacts-5-grid -->
+</div>
+
+<div class="contacts-sub-5">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24478.68106498493!2d32.784431572742896!3d39.92270556285106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f3ac97e815d%3A0xfd4a4110ab5e5636!2sEmek%2C%2006490%20%C3%87ankaya%2FAnkara!5e0!3m2!1str!2str!4v1686394300694!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+

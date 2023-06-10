@@ -1,0 +1,29 @@
+﻿@using RealHouzing.Consume.Models.ServiceModels;
+@model UpdateServiceViewModel
+@{
+    ViewData["Title"] = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h1 class="container">Hizmet Güncelleme Sayfası</h1>
+
+<br />
+<form method="post" class="container">
+    @Html.HiddenFor(x=>x.ServiceID)
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Hizmet Adı</label>
+    <input type="text" asp-for="ServiceName" class="form-control" />
+    <br />
+    <label>Hizmet İkonu</label>
+    <input type="text" asp-for="Icon" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+
+</form>

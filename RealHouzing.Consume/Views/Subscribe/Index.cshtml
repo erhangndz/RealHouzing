@@ -1,0 +1,52 @@
+﻿@using RealHouzing.Consume.Models.SubscribeModels;
+@model List<SubscribeListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<
+<h3 class="container">Aboneler</h3>
+<br />
+<br />
+<div class="container">
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Abone Mail Adresi</th>
+      
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Mail</td>
+              
+                <td>
+                    <a href="/Subscribe/DeleteSubscribe/@item.SubscribeID" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+                <td>
+                    <a href="/Subscribe/UpdateSubscribe/@item.SubscribeID" class="btn btn-outline-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+  
+</div>
+
+
+
+

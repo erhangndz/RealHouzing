@@ -15,7 +15,7 @@ namespace RealHouzing.DataAccessLayer.Repositories
         public void Delete(T t)
         {
             using var c= new Context();
-            c.Set<T>().Remove(t);
+             c.Set<T>().Remove(t);
             c.SaveChanges();
         }
 

@@ -1,0 +1,29 @@
+﻿@using RealHouzing.Consume.Models.BuyLeaseModels;
+@model AddBuyLeaseViewModel
+@{
+    ViewData["Title"] = "AddBuyLease";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1 class="container">Sat & Kirala Ekleme Sayfası</h1>
+
+<br />
+<form method="post" class="container">
+    <label>Başlık 1</label>
+    <input type="text" asp-for="Title1" class="form-control" />
+    <br />
+    <label>Başlık 2</label>
+    <input type="text" asp-for="Title2" class="form-control" />
+    <br />
+    <label>Görsel URL</label>
+    <input type="text" asp-for="ImageURL" class="form-control" />
+    <br />
+    <label>Buton İsmi</label>
+    <input type="text" asp-for="Button" class="form-control" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+
+</form>
+
+

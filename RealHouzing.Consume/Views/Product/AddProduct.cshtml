@@ -1,5 +1,5 @@
 ﻿@using RealHouzing.Consume.Models.ProductModels;
-@model PropertyViewModel
+@model AddProductViewModel
 @{
     ViewData["Title"] = "AddProduct";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -35,8 +35,8 @@
     <label>İlan Görsel URL</label>
     <input type="text" asp-for="ImageURL" class="form-control" />
     <br />
-    <label>Kategori ID</label>
-    <input type="text" asp-for="CategoryID" class="form-control" />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.category,new {@class="form-control"})
     <br />
     <button class="btn btn-outline-info">Kaydet</button>
 

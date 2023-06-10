@@ -16,6 +16,8 @@
             <th>#</th>
             <th>İlan Başlığı</th>
             <th>İlan Türü</th>
+            <th>Fiyatı</th>
+            <th>Kategori</th>
             <th>Sil</th>
             <th>Düzenle</th>
         </tr>
@@ -26,6 +28,8 @@
                 <th>@count</th>
                 <td>@item.ProductTitle</td>
                 <td>@item.ProductType</td>
+                <td>@item.ProductPrice ₺</td>
+                <td>@item.CategoryID</td>
                 <td>
                     <a href="/Product/DeleteProduct/@item.ProductID" class="btn btn-outline-danger" id="DeleteBtn"
                        onclick="return confirm('Silmek istediğinize emin misiniz?');">

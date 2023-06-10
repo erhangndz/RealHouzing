@@ -1,0 +1,21 @@
+﻿@using RealHouzing.Consume.Models.SubscribeModels;
+@model UpdateSubscribeViewModel
+@{
+    ViewData["Title"] = "UpdateSubscribe";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1 class="container">Abone Güncelleme Sayfası</h1>
+
+<br />
+<form method="post" class="container">
+    @Html.HiddenFor(x=>x.SubscribeID)
+    <label>Mail Adresi</label>
+    <input type="text" asp-for="Mail" class="form-control" />
+    <br />
+    <button class="btn btn-outline-info">Güncelle</button>
+
+</form>
+
+

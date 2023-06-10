@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<!--/inner-page-->
+@await Component.InvokeAsync("_ServiceBanner")
+<!--//inner-page-->
+@await Component.InvokeAsync("_PostProperty")
+<!--/explore-->
+@await Component.InvokeAsync("_Explore")
+<!--//explore-->
+<!-- categories section -->
+@await Component.InvokeAsync("_Categories")
+<!--//categories section -->
+<!--/w3l-pricing-->
+@await Component.InvokeAsync("_Pricing")
+<!-- //w3l-pricing-->
+

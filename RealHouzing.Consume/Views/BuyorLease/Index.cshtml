@@ -1,0 +1,49 @@
+﻿@using RealHouzing.Consume.Models.BuyLeaseModels;
+@model List<BuyLeaseViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<h3 class="container">Sat & Kirala </h3>
+
+<br />
+<br />
+<div class="container">
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Title1 @item.Title2</td>
+                <td>
+                    <a href="/BuyorLease/DeleteBuyLease/@item.BuyLeaseID" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+                <td>
+                    <a href="/BuyorLease/UpdateBuyLease/@item.BuyLeaseID" class="btn btn-outline-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/BuyorLease/AddBuyLease" class="btn btn-outline-info">Yeni Sat & Kirala Girişi</a>
+</div>
+
+

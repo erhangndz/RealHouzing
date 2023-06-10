@@ -9,5 +9,6 @@ namespace Realhouzing.DtoLayer.CategoryDtos
     public class ResultCategoryDto
     {
         public string CategoryName { get; set; }
+        public string? ImageURL { get; set; }
     }
 }

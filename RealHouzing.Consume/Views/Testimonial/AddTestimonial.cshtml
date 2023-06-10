@@ -1,0 +1,27 @@
+﻿@using RealHouzing.Consume.Models.TestimonialModels;
+@model AddTestimonialViewModel
+@{
+    ViewData["Title"] = "AddTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1 class="container">Referans Ekleme Sayfası</h1>
+
+<br />
+<form method="post" class="container">
+    <label>Ad Soyad</label>
+    <input type="text" asp-for="NameSurname" class="form-control" />
+    <br />
+    <label>Unvanı</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Yorumu</label>
+    <textarea type="text" asp-for="Comment" class="form-control" ></textarea>
+    <br />
+    <label>Görsel URL</label>
+    <input type="text" asp-for="ImageURL" class="form-control" />
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+
+</form>

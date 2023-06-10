@@ -1,0 +1,49 @@
+﻿@using RealHouzing.Consume.Models.AboutModels;
+@model List<AboutFeatureListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<h3 class="container">Hakkımızda</h3>
+
+<br />
+<br />
+<div class="container">
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Madde</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Item</td>
+                <td>
+                    <a href="/AdminAbout/DeleteAbout/@item.AboutID" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+                <td>
+                    <a href="/AdminAbout/UpdateAbout/@item.AboutID" class="btn btn-outline-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/AdminAbout/AddAbout" class="btn btn-outline-info">Yeni Hakkımızda Girişi</a>
+</div>
+
+

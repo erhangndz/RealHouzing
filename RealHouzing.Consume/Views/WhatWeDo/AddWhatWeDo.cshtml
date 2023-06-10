@@ -1,0 +1,24 @@
+﻿@using RealHouzing.Consume.Models.WhatWeDoModels;
+@model AddWhatwedoViewModel
+@{
+    ViewData["Title"] = "AddWhatWeDo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h1 class="container">Yaptıklarımız Ekleme Sayfası</h1>
+
+<br />
+<form method="post" class="container">
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Görsel URL</label>
+    <input type="text" asp-for="ImageURL" class="form-control" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+
+</form>
+

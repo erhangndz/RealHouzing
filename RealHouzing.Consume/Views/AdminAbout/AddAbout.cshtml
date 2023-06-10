@@ -1,0 +1,21 @@
+﻿@using RealHouzing.Consume.Models.AboutModels;
+@model AddAboutViewModel
+@{
+    ViewData["Title"] = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h1 class="container">Hakkımızda Ekleme Sayfası</h1>
+
+<br />
+<form method="post" class="container">
+    <label>Madde</label>
+    <input type="text" asp-for="Item" class="form-control" />
+    <br />
+  
+    <button class="btn btn-info">Kaydet</button>
+
+</form>
+

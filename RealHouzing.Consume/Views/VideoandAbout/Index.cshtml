@@ -1,0 +1,50 @@
+﻿@using RealHouzing.Consume.Models.VideoandAboutModels;
+@model List<VideoandAboutViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<h3 class="container">Video ve Açıklama</h3>
+
+<br />
+<br />
+<div class="container">
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Başlık</th>
+            <th>Video Embed</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Title</td>
+                <td><a href="@item.VideoURL" class="btn btn-secondary">Video</a> </td>
+                <td>
+                    <a href="/VideoandAbout/DeleteVideoandAbout/@item.VideoandAboutID" target="_blank" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+                <td>
+                    <a href="/VideoandAbout/UpdateVideoandAbout/@item.VideoandAboutID" class="btn btn-outline-success">
+                        <i class="fas fa-pencil-alt">
+                        </i>Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/VideoandAbout/AddVideoandAbout" class="btn btn-outline-info">Yeni Video ve Açıklama Girişi</a>
+</div>
+

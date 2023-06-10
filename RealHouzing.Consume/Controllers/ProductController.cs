@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using RealHouzing.Consume.Models.CategoryModels;
 using RealHouzing.Consume.Models.ProductModels;
 using System.Text;
 
@@ -28,9 +30,22 @@ namespace RealHouzing.Consume.Controllers
         }
 
         [HttpGet]
-        public IActionResult AddProduct()
+        public async Task<IActionResult> AddProduct()
         {
-            return View();
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("https://localhost:44316/api/Category");
+           
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<CategoryListViewModel>>(jsonData);
+            List<SelectListItem> category = (from x in values
+                                             select new SelectListItem
+                                             {
+                                                 Text = x.CategoryName,
+                                                 Value = x.CategoryID.ToString()
+                                             }).ToList();
+            ViewBag.category = category;
+                return View();
+           
         }
         [HttpPost]
         public async Task<IActionResult> AddProduct(AddProductViewModel p) 
@@ -61,6 +76,20 @@ namespace RealHouzing.Consume.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdateProduct(int id) 
         {
+            var client2 = _httpClientFactory.CreateClient();
+            var response2 = await client2.GetAsync("https://localhost:44316/api/Category");
+
+            var jsonData2 = await response2.Content.ReadAsStringAsync();
+            var values2 = JsonConvert.DeserializeObject<List<CategoryListViewModel>>(jsonData2);
+            List<SelectListItem> category = (from x in values2
+                                             select new SelectListItem
+                                             {
+                                                 Text = x.CategoryName,
+                                                 Value = x.CategoryID.ToString()
+                                             }).ToList();
+            ViewBag.category = category;
+
+
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync($"https://localhost:44316/api/Product/{id}");
             if (response.IsSuccessStatusCode)

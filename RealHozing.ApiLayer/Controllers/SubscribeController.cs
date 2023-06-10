@@ -17,6 +17,14 @@ namespace RealHozing.ApiLayer.Controllers
             _subscribeService = subscribeService;
         }
 
+        [HttpGet]
+        public IActionResult SubscribeList()
+        {
+            var values= _subscribeService.TGetList();
+            return Ok(values);
+        }
+
+
         [HttpPost]
         public IActionResult AddSubscribe(AddSubscribeDto p)
         {
@@ -31,7 +39,7 @@ namespace RealHozing.ApiLayer.Controllers
         [HttpGet("{id}")]
         public IActionResult GetSubscribe(int id)
         {
-            var values= _subscribeService.TGetByID(id);
+            var values = _subscribeService.TGetByID(id);
             return Ok(values);
         }
 
@@ -47,7 +55,7 @@ namespace RealHozing.ApiLayer.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteSubscribe(int id)
         {
             var values = _subscribeService.TGetByID(id);

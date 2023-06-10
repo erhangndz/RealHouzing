@@ -1,0 +1,52 @@
+﻿@using RealHouzing.Consume.Models.MessageModels;
+@model List<MessageListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+
+<h3 class="container">Gelen Mesajlar</h3>
+
+<br />
+<br />
+<div class="container">
+
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ad Soyad</th>
+            <th>Konu</th>
+            <th>Mail</th>
+            <th>Telefon</th>
+            <th>Mesaj</th>
+            <th>Sil</th>
+          
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.NameSurname</td>
+                <td>@item.Subject</td>
+                <td>@item.Mail</td>
+                <td>@item.Phone</td>
+                <td>@item.Content</td>
+                <td>
+                    <a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-outline-danger" id="DeleteBtn"
+                       onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                        <i class="fas fa-trash">
+                        </i>Sil
+                    </a>
+                </td>
+             
+            </tr>
+        }
+    </table>
+    <br />
+  
+</div>
+

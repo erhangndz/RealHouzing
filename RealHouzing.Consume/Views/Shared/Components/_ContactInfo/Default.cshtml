@@ -1,0 +1,37 @@
+﻿@using RealHouzing.Consume.Models.ContactModels;
+@model List<ContactListViewModel>
+
+    @foreach (var item in Model)
+{
+    
+
+<div class="contacts-5-grid-main mt-5">
+    <div class="contacts-5-grid">
+        <div class="map-content-5">
+            <div class="d-grid grid-col-2 justify-content-center">
+                <div class="contact-type">
+                    <div class="address-grid">
+                        <span class="fas fa-map-marked-alt"></span>
+                        <h6>Adres</h6>
+                        <p>@item.Address</p>
+
+                    </div>
+                    <div class="address-grid">
+                        <span class="fas fa-envelope-open-text"></span>
+                        <h6>Email</h6>
+                        <a href="mailto:@item.Mail" class="link1">@item.Mail</a>
+                       
+
+                    </div>
+                    <div class="address-grid">
+                        <span class="fas fa-phone-alt"></span>
+                        <h6>Telefon</h6>
+                        <a href="Tel:@item.Phone" class="link1">@item.Phone</a>
+                       
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>}
