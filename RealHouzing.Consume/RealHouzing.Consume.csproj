@@ -2101,11 +2101,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.16" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RealHouzing.BusinessLayer\RealHouzing.BusinessLayer.csproj" />
     <ProjectReference Include="..\RealHouzing.DataAccessLayer\RealHouzing.DataAccessLayer.csproj" />
     <ProjectReference Include="..\RealHouzing.EntityLayer\RealHouzing.EntityLayer.csproj" />
   </ItemGroup>

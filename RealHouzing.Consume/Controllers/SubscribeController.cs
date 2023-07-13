@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealHouzing.Consume.Models.ServiceModels;
 using RealHouzing.Consume.Models.SubscribeModels;
@@ -6,7 +7,8 @@ using System.Text;
 
 namespace RealHouzing.Consume.Controllers
 {
-    public class SubscribeController : Controller
+	[Authorize]
+	public class SubscribeController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 

@@ -1,0 +1,98 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estate Register Form Responsive Widget Template :: w3layouts</title>
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Estate Register Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta-Tags -->
+	<!-- css files -->
+	<link href="~/register/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="~/register/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //css files -->
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
+	<!-- //google fonts -->
+
+</head>
+<body>
+
+	<div class="signupform">
+		<h1>RealHouzing Kayıt Formu</h1>
+		<div class="container">
+			<!-- main content -->
+			<div class="agile_info">
+				<div class="w3l_form">
+					<div class="left_grid_info">
+						<img src="~/register/images/left.png" alt="" />
+					</div>
+				</div>
+				
+				
+				<div class="w3_info">
+					<h2>Yeni bir hesap oluştur.</h2>
+					<p>Siz de sitemizde ilan vermek istiyorsanız lütfen kaydolun.</p>
+					<form method="post">
+						<div class="input-group">
+							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" placeholder="Adınız" asp-for="Name" />
+						</div>
+						
+						<div class="input-group">
+							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" placeholder="Soyadınız" asp-for="Surname"  />
+						</div>
+						<div class="input-group">
+							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" placeholder="Görsel URL" asp-for="ImageURL" />
+						</div>
+						<div class="input-group">
+							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" placeholder="Kullanıcı Adınız" asp-for="UserName" />
+						</div>
+						<div class="input-group">
+							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+							<input type="email" placeholder="Email Adresiniz" asp-for="Mail"  />
+						</div>
+						<div class="input-group">
+							<span><i class="fa fa-lock" aria-hidden="true"></i></span>
+							<input type="password" placeholder="Şifreniz" asp-for="Password" />
+						</div>
+						<div class="input-group">
+							<span><i class="fa fa-lock" aria-hidden="true"></i></span>
+							<input type="password" placeholder="Şifreyi Tekrar yazın" asp-for="ConfirmPassword" />
+						</div>
+						<div style="color:red" asp-validation-summary="ModelOnly"></div>
+						<button class="btn btn-danger btn-block" type="submit" >Kayıt ol</button>
+					</form>
+					<p class="account">Zaten bir hesabınız var mı? <a href="/Login/Index">Giriş Yapın</a></p>
+				</div>
+				
+			</div>
+			<!-- //main content -->
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<p>&copy; @DateTime.Now.Year RealHouzing Kayıt formu. Tüm hakları saklıdır. | Tasarım: <a href="https://w3layouts.com/" target="blank">W3layouts</a></p>
+		</div>
+		<!-- footer -->
+	</div>
+
+</body>
+</html>

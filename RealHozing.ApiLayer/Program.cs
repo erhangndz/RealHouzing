@@ -1,8 +1,12 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using RealHouzing.BusinessLayer.Abstract;
 using RealHouzing.BusinessLayer.Concrete;
+using RealHouzing.Consume.ViewComponents.Default;
 using RealHouzing.DataAccessLayer.Abstract;
 using RealHouzing.DataAccessLayer.Concrete;
 using RealHouzing.DataAccessLayer.EntityFramework;
+using RealHouzing.EntityLayer.Concrete;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,6 +56,13 @@ builder.Services.AddScoped<IMessageDal, EfMessageDal>();
 builder.Services.AddScoped<IMessageService, MessageManager>();
 
 
+
+
+
+
+
+
+
 builder.Services.AddControllers();
 builder.Services.AddControllersWithViews()
     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
@@ -72,6 +83,14 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+
 app.MapControllers();
 
 app.Run();
+
+app.UseStaticFiles();
+
+app.UseEndpoints(endpoints =>
+{
+	endpoints.MapDefaultControllerRoute();
+});

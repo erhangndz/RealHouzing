@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealHouzing.Consume.Models.ProductModels;
 using RealHouzing.Consume.Models.TeamModels;
@@ -6,7 +7,8 @@ using System.Text;
 
 namespace RealHouzing.Consume.Controllers
 {
-    public class TeamController : Controller
+	[Authorize]
+	public class TeamController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 

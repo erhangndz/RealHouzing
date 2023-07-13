@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealHouzing.Consume.Models.CategoryModels;
 using RealHouzing.Consume.Models.WhatWeDoModels;
@@ -6,7 +7,8 @@ using System.Text;
 
 namespace RealHouzing.Consume.Controllers
 {
-    public class WhatWeDoController : Controller
+	[Authorize]
+	public class WhatWeDoController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 

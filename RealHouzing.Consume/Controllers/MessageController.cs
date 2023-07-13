@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealHouzing.Consume.Models.AboutModels;
 using RealHouzing.Consume.Models.MessageModels;
@@ -6,7 +7,8 @@ using System.Text;
 
 namespace RealHouzing.Consume.Controllers
 {
-    public class MessageController : Controller
+	[Authorize]
+	public class MessageController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 

@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RealHouzing.DataAccessLayer\RealHouzing.DataAccessLayer.csproj" />
     <ProjectReference Include="..\RealHouzing.EntityLayer\RealHouzing.EntityLayer.csproj" />
   </ItemGroup>
